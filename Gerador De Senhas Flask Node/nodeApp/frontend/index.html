@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha</title>
+    <link rel="stylesheet" href="/nodeApp/frontend/css.css">
+</head>
+<body>
+    <div class="container">
+      <header>
+        <h1>GERADOR DE SENHAS</h1>
+      </header>
+      <main>
+        <p>Gere sua senha abaixo, configure como deseja e clique em gerar</p>
+          <div class="input-group">
+            <label for="length">Quantidade de caracteres:</label>
+            <input type="number" id="length" placeholder="0">
+          </div>
+          <div class="input-group">
+            <label for="specific_letters">Letras que deseja na senha:</label>
+            <input type="text" id="specific_letters" placeholder="ACDKZ">
+          </div>
+          <div class="input-group">
+            <label for="specific_numbers">Números que deseja na senha:</label>
+            <input type="text" id="specific_numbers" placeholder="1689">
+          </div>
+          <div class="options">
+            <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox" id="special">
+                  <span class="slider"></span>
+                </label>
+                <span>Caracteres especiais</span>
+              </div>
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox" checked id="uppercase">
+                  <span class="slider"></span>
+                </label>
+                <span>Letras maiúsculas</span>
+              </div>
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox" id="lowercase">
+                  <span class="slider"></span>
+                </label>
+                <span>Letras minúsculas</span>
+              </div>
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox" id="numbers">
+                  <span class="slider"></span>
+                </label>
+                <span>Números</span>
+              </div>
+          </div>
+          <button type="submit" class="generate-btn">GERAR MINHA SENHA</button>
+        <div class="result-container">
+            <input type="text" id="password-result" readonly placeholder="Sua senha aparecerá aqui">
+            <button id="copy-btn">Copiar</button>
+        </div>
+      </main>
+    </div>
+    <script src="/nodeApp/frontend/js.js"></script>
+  </body>
+</html>
